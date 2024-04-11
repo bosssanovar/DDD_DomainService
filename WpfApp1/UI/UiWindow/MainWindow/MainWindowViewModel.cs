@@ -1,17 +1,13 @@
-﻿using Reactive.Bindings;
+﻿using DomainService;
+
+using Reactive.Bindings;
 using Reactive.Bindings.Extensions;
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DomainService;
 using System.Reactive.Disposables;
 
 
-namespace UI.MainWindow
+namespace UI.UiWindow.MainWindow
 {
     public partial class MainWindowView : INotifyPropertyChanged
     {

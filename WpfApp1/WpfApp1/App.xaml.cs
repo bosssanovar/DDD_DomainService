@@ -6,7 +6,8 @@ using Repository;
 
 using System.Windows;
 
-using UI.MainWindow;
+using UI.UiWindow.MainWindow;
+
 using Usecase;
 
 namespace WpfApp1

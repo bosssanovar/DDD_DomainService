@@ -1,10 +1,6 @@
-﻿
-using Reactive.Bindings;
-using Reactive.Bindings.Extensions;
+﻿using System.Windows;
 
-using System.Windows;
-
-namespace UI.MainWindow
+namespace UI.UiWindow.MainWindow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
