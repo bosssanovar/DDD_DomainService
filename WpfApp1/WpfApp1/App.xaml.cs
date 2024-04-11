@@ -2,8 +2,6 @@
 
 using Repository;
 
-using System.Configuration;
-using System.Data;
 using System.Windows;
 
 using Usecase;

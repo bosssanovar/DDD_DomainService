@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BBBEntity;
+﻿using BBBEntity;
 
 namespace DomainService
 {
@@ -11,7 +6,7 @@ namespace DomainService
     {
         public bool IsValid(string value)
         {
-            if(string.IsNullOrEmpty(value)) return true;
+            if (string.IsNullOrEmpty(value)) return true;
 
             return value.Length <= _aaaEntity.AAA.Value;
         }

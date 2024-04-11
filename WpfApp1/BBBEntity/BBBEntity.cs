@@ -11,7 +11,8 @@
 
         public void SetBBB(BBBVO bbb, IBBBLehgthChecker checker)
         {
-            if (!checker.IsValid(bbb.Value)){
+            if (!checker.IsValid(bbb.Value))
+            {
                 throw new ArgumentOutOfRangeException(nameof(bbb), "範囲外");
             }
 
