@@ -5,7 +5,7 @@ using Reactive.Bindings.Extensions;
 
 using System.Windows;
 
-namespace WpfApp1
+namespace UI.MainWindow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -1,8 +1,7 @@
 ﻿using Reactive.Bindings;
-
 using Usecase;
 
-namespace WpfApp1
+namespace UI.MainWindow
 {
     public class Model
     {

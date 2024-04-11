@@ -2,7 +2,7 @@
 
 namespace Usecase
 {
-    public class DisplaySettingsUsecase(AAARepository _aaaRepository, BBBRepository _bbbRepository)
+    public class DisplaySettingsUsecase(IAAARepository _aaaRepository, IBBBRepository _bbbRepository)
     {
         public AAAEntity.AAAEntity GetAAAEntity()
         {

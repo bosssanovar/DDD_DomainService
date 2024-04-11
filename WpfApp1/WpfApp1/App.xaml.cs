@@ -1,9 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using InMemoryRepository;
+
+using Microsoft.Extensions.DependencyInjection;
 
 using Repository;
 
 using System.Windows;
 
+using UI.MainWindow;
 using Usecase;
 
 namespace WpfApp1
@@ -24,8 +27,8 @@ namespace WpfApp1
         private static ServiceProvider CreateDependencyInjectionProvider()
         {
             var services = new ServiceCollection();
-            services.AddSingleton<AAARepository>();
-            services.AddSingleton<BBBRepository>();
+            services.AddSingleton<IAAARepository, AAARepository>();
+            services.AddSingleton<IBBBRepository, BBBRepository>();
             services.AddTransient<DisplaySettingsUsecase>();
             services.AddTransient<Model>();
             services.AddTransient<MainWindow>();

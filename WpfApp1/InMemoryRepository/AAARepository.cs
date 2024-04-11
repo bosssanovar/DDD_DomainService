@@ -1,6 +1,8 @@
-﻿namespace Repository
+﻿using Repository;
+
+namespace InMemoryRepository
 {
-    public class AAARepository
+    public class AAARepository : IAAARepository
     {
         private AAAEntity.AAAEntity _aaaEntity;
 
