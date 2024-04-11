@@ -1,25 +1,31 @@
-﻿using DomainService;
-
-using Reactive.Bindings;
+﻿using Reactive.Bindings;
 using Reactive.Bindings.Extensions;
 
-using System.Windows;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DomainService;
+using System.Reactive.Disposables;
+
 
 namespace UI.MainWindow
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowView : INotifyPropertyChanged
     {
-        private readonly Model _model;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        public ReactivePropertySlim<int> AAAVal { get; }
+        private Model? _model;
 
-        public ReactivePropertySlim<string> BBBVal { get; }
+        private readonly CompositeDisposable _compositeDisposable = [];
 
+        public ReactivePropertySlim<int> AAAVal { get; private set; } = new(0);
 
-        public MainWindow(Model model)
+        public ReactivePropertySlim<string> BBBVal { get; private set; } = new(string.Empty);
+
+        private void MainWindowViewModel(Model model)
         {
             _model = model;
 
@@ -36,7 +42,8 @@ namespace UI.MainWindow
 
                     return entity;
                 },
-                mode: ReactivePropertyMode.DistinctUntilChanged);
+                mode: ReactivePropertyMode.DistinctUntilChanged)
+                .AddTo(_compositeDisposable);
 
             BBBVal = _model.BbbEntity.ToReactivePropertySlimAsSynchronized(
                 x => x.Value,
@@ -58,9 +65,8 @@ namespace UI.MainWindow
 
                     return entity;
                 },
-                mode: ReactivePropertyMode.DistinctUntilChanged);
-
-            InitializeComponent();
+                mode: ReactivePropertyMode.DistinctUntilChanged)
+                .AddTo(_compositeDisposable);
         }
     }
 }

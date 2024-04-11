@@ -19,7 +19,7 @@ namespace WpfApp1
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             ServiceProvider provider = CreateDependencyInjectionProvider();
-            var mainWindow = provider.GetRequiredService<MainWindow>();
+            var mainWindow = provider.GetRequiredService<MainWindowView>();
 
             mainWindow.Show();
         }
@@ -31,7 +31,7 @@ namespace WpfApp1
             services.AddSingleton<IBBBRepository, BBBRepository>();
             services.AddTransient<DisplaySettingsUsecase>();
             services.AddTransient<Model>();
-            services.AddTransient<MainWindow>();
+            services.AddTransient<MainWindowView>();
 
             var provider = services.BuildServiceProvider();
             return provider;
