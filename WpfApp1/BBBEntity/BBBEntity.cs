@@ -2,11 +2,13 @@
 {
     public class BBBEntity
     {
+        public const string BBB_InitValue = "init value";
+
         public BBBVO BBB { get; private set; }
 
         public BBBEntity()
         {
-            BBB = new("init value");
+            BBB = new(BBB_InitValue);
         }
 
         public void SetBBB(BBBVO bbb, IBBBLehgthChecker checker)

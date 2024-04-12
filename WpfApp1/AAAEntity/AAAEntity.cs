@@ -2,14 +2,17 @@
 {
     public class AAAEntity
     {
+        public const int ZZZ_InitValue = 20;
+        public const int AAA_InitValue = 10;
+
         public ZZZVO ZZZ { get; private set; }
 
         public AAAVO AAA { get; private set; }
 
         public AAAEntity()
         {
-            ZZZ = new(20);
-            AAA = new(10);
+            ZZZ = new(ZZZ_InitValue);
+            AAA = new(AAA_InitValue);
         }
 
         public void SetZZZ(ZZZVO zzz, IAAAChangedEvent changedEvent)
