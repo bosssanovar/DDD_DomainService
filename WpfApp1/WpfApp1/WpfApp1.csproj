@@ -19,7 +19,7 @@
     <ProjectReference Include="..\DomainService\DomainService.csproj" />
     <ProjectReference Include="..\InMemoryRepository\InMemoryRepository.csproj" />
     <ProjectReference Include="..\Repository\Repository.csproj" />
-    <ProjectReference Include="..\UI\UI.csproj" />
+    <ProjectReference Include="..\UI\UiParts.csproj" />
     <ProjectReference Include="..\Usecase\Usecase.csproj" />
   </ItemGroup>
 

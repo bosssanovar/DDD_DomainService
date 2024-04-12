@@ -8,7 +8,7 @@ using System.Reactive.Disposables;
 using System.Windows;
 
 
-namespace UI.UiWindow.MainWindow
+namespace UiParts.UiWindow.MainWindow
 {
     public partial class MainWindowView : INotifyPropertyChanged
     {
@@ -55,7 +55,7 @@ namespace UI.UiWindow.MainWindow
                     if (entity.IsHaveToCorrectAAA(x))
                     {
                         if (MessageBox.Show(
-                            "ZZZ設定の変更によりAAA設定の設定値が補正され、それに関わる項目も補正される可能性があります。\n\nZZZ設定を変更しますか？", 
+                            "ZZZ設定の変更によりAAA設定の設定値が補正され、それに関わる項目も補正される可能性があります。\n\nZZZ設定を変更しますか？",
                             "確認",
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Question,

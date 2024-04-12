@@ -6,7 +6,7 @@ using Repository;
 
 using System.Windows;
 
-using UI.UiWindow.MainWindow;
+using UiParts.UiWindow.MainWindow;
 
 using Usecase;
 

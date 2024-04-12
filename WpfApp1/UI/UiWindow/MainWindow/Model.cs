@@ -2,7 +2,7 @@
 
 using Usecase;
 
-namespace UI.UiWindow.MainWindow
+namespace UiParts.UiWindow.MainWindow
 {
     public class Model
     {

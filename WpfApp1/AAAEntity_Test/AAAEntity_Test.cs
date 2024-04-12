@@ -1,5 +1,3 @@
-using BBBEntity;
-
 using DomainService;
 
 namespace AAAEntity_Test
