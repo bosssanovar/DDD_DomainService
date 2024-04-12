@@ -15,14 +15,22 @@
 
         <GroupBox Grid.Row="0" Header="AAAEntity">
             <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Text="AAA設定 入力文字数指定" Margin="5"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="ZZZ設定 入力文字数指定上限" Margin="5"/>
 
-                <TextBox Grid.Column="1" Text="{Binding AAAVal.Value}" Margin="5"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ZZZVal.Value}" Margin="5"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="AAA設定 入力文字数指定" Margin="5"/>
+
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding AAAVal.Value}" Margin="5"/>
             </Grid>
         </GroupBox>
 
