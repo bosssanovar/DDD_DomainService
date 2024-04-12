@@ -2,8 +2,11 @@
 {
     public class AAAEntity
     {
+        public const int YYY_InitValue = 100;
         public const int ZZZ_InitValue = 20;
         public const int AAA_InitValue = 10;
+
+        public YYYVO YYY { get; set; }
 
         public ZZZVO ZZZ { get; private set; }
 
@@ -11,6 +14,7 @@
 
         public AAAEntity()
         {
+            YYY = new(YYY_InitValue);
             ZZZ = new(ZZZ_InitValue);
             AAA = new(AAA_InitValue);
         }

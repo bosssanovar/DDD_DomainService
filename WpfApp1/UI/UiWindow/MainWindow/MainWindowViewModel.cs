@@ -18,6 +18,8 @@ namespace UI.UiWindow.MainWindow
 
         private readonly CompositeDisposable _compositeDisposable = [];
 
+        public ReactivePropertySlim<int> YYYVal { get; private set; } = new(0);
+
         public ReactivePropertySlim<int> ZZZVal { get; private set; } = new(0);
 
         public ReactivePropertySlim<int> AAAVal { get; private set; } = new(0);
@@ -27,6 +29,21 @@ namespace UI.UiWindow.MainWindow
         private void MainWindowViewModel(Model model)
         {
             _model = model;
+
+            YYYVal = _model.AaaEntity.ToReactivePropertySlimAsSynchronized(
+                x => x.Value,
+                x => x.YYY.Value,
+                x =>
+                {
+                    var entity = _model.AaaEntity.Value;
+                    entity.YYY = new(x);
+
+                    _model.ForceNotifyAaaEntity();
+
+                    return entity;
+                },
+                mode: ReactivePropertyMode.DistinctUntilChanged)
+                .AddTo(_compositeDisposable);
 
             ZZZVal = _model.AaaEntity.ToReactivePropertySlimAsSynchronized(
                 x => x.Value,
