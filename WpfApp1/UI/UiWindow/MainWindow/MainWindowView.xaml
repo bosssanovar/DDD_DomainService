@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UiParts.UiWindow.MainWindow"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
-        Title="MainWindow" Height="250" Width="400">
+        Title="MainWindow" Height="250" Width="400" Closing="Window_Closing">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

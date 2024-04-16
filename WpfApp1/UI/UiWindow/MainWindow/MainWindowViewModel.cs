@@ -126,5 +126,11 @@ namespace UiParts.UiWindow.MainWindow
                 mode: ReactivePropertyMode.DistinctUntilChanged)
                 .AddTo(_compositeDisposable);
         }
+
+        private void Dispose()
+        {
+            _compositeDisposable.Dispose();
+            _model?.Dispose();
+        }
     }
 }
