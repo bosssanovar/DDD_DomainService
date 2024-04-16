@@ -12,7 +12,9 @@ namespace UiParts.UiWindow.MainWindow
 {
     public partial class MainWindowView : INotifyPropertyChanged
     {
+#pragma warning disable CS0067 // イベント 'MainWindowView.PropertyChanged' は使用されていません
         public event PropertyChangedEventHandler? PropertyChanged;
+#pragma warning restore CS0067 // イベント 'MainWindowView.PropertyChanged' は使用されていません
 
         private Model? _model;
 
