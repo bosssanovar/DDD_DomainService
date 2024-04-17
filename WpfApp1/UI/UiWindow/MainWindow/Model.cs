@@ -1,16 +1,11 @@
 ﻿using Reactive.Bindings;
 using Reactive.Bindings.Extensions;
-
-using System.Reactive.Disposables;
-
 using Usecase;
 
 namespace UiParts.UiWindow.MainWindow
 {
-    public class Model : IDisposable
+    public class Model : ModelBase
     {
-        private readonly CompositeDisposable _compositeDisposable = [];
-
         private readonly DisplaySettingsUsecase _displaySettingsUsecase;
 
         public ReactivePropertySlim<AAAEntity.AAAEntity> AaaEntity { get; }
@@ -34,11 +29,6 @@ namespace UiParts.UiWindow.MainWindow
         public void ForceNotifyBbbEntity()
         {
             BbbEntity.ForceNotify();
-        }
-
-        public void Dispose()
-        {
-            _compositeDisposable.Dispose();
         }
     }
 }

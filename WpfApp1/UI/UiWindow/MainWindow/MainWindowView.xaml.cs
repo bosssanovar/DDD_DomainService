@@ -5,19 +5,15 @@ namespace UiParts.UiWindow.MainWindow
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindowView : Window
+    public partial class MainWindowView : WindowBase
     {
 
         public MainWindowView(Model model)
+            : base(model)
         {
             MainWindowViewModel(model);
 
             InitializeComponent();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Dispose();
         }
     }
 }

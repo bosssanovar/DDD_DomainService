@@ -18,8 +18,6 @@ namespace UiParts.UiWindow.MainWindow
 
         private Model? _model;
 
-        private readonly CompositeDisposable _compositeDisposable = [];
-
         public ReactivePropertySlim<int> YYYVal { get; private set; } = new(0);
 
         public ReactivePropertySlim<int> ZZZVal { get; private set; } = new(0);
@@ -125,12 +123,6 @@ namespace UiParts.UiWindow.MainWindow
                 },
                 mode: ReactivePropertyMode.DistinctUntilChanged)
                 .AddTo(_compositeDisposable);
-        }
-
-        private void Dispose()
-        {
-            _compositeDisposable.Dispose();
-            _model?.Dispose();
         }
     }
 }
